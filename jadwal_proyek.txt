@@ -1,0 +1,25 @@
+Nama Project 1
+Wednesday, 1 Oct 2025 - Pengumpulan materi dari klien
+Wednesday, 8 Oct 2025 - Pembuatan kerangka
+Friday, 10 Oct 2025 - Review kerangka
+Friday, 17 Oct 2025 - Proses Desain
+Tuesday, 21 Oct 2025 - Review Desain
+Friday, 24 Oct 2025 - Update Revisi Desain
+Tuesday, 28 Oct 2025 - Review Desain
+Tuesday, 4 Nov 2025 - Proses Dev
+Monday, 10 Nov 2025 - Proses Revisi
+Wednesday, 12 Nov 2025 - Finishing
+Thursday, 13 Nov 2025 - Share Akses
+
+Nama Project 2
+Wednesday, 1 Oct 2025 - Pengumpulan materi dari klien
+Wednesday, 8 Oct 2025 - Pembuatan kerangka
+Friday, 10 Oct 2025 - Review kerangka
+Friday, 17 Oct 2025 - Proses Desain
+Tuesday, 21 Oct 2025 - Review Desain
+Friday, 24 Oct 2025 - Update Revisi Desain
+Tuesday, 28 Oct 2025 - Review Desain
+Tuesday, 4 Nov 2025 - Proses Dev
+Monday, 10 Nov 2025 - Proses Revisi
+Wednesday, 12 Nov 2025 - Finishing
+Thursday, 13 Nov 2025 - Share Akses

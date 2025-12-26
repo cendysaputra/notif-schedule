@@ -1,0 +1,57 @@
+name: Daily Email Notification
+
+on:
+  schedule:
+    # Runs every day at 02:00 UTC (09:00 WIB)
+    - cron: '0 2 * * *'
+  
+  # Allow manual trigger
+  workflow_dispatch:
+
+jobs:
+  send-notification:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+    
+    - name: Create email config from secrets
+      run: |
+        cat > email_config.json << EOF
+        {
+          "smtp_server": "smtp.gmail.com",
+          "smtp_port": 587,
+          "sender_email": "${{ secrets.SENDER_EMAIL }}",
+          "sender_password": "${{ secrets.SENDER_PASSWORD }}",
+          "recipient_emails": [
+            "${{ secrets.RECIPIENT_EMAIL }}"
+          ]
+        }
+        EOF
+    
+    - name: Set timezone to WIB
+      run: |
+        sudo timedatectl set-timezone Asia/Jakarta
+    
+    - name: Run email notifier
+      env:
+        SENDER_EMAIL: ${{ secrets.SENDER_EMAIL }}
+        SENDER_PASSWORD: ${{ secrets.SENDER_PASSWORD }}
+        RECIPIENT_EMAIL: ${{ secrets.RECIPIENT_EMAIL }}
+      run: |
+        python email-notif.py
+    
+    - name: Show logs (for debugging)
+      if: always()
+      run: |
+        echo "Script execution completed"
+        if [ -f log.txt ]; then
+          echo "=== Log Contents ==="
+          cat log.txt
+        fi
