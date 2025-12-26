@@ -112,4 +112,6 @@ Edit GitHub Secret `RECIPIENT_EMAIL` atau file lokal `email_config.json`:
 }
 ```
 
-## Lisensi : Project ini dibuat untuk keperluan internal manajemen proyek
+## Lisensi :
+
+Project ini dibuat untuk keperluan internal manajemen proyek
